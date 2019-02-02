@@ -1,0 +1,27 @@
+{
+  "name": "staticwebgenerator",
+  "version": "1.0.0",
+  "description": "Static Web Generator Starter Kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-pages": "node ./build_scripts/builder.js",
+    "start": "concurrently --kill-others \"nodemon -e js,json,css,md -i build -x \\\"npm run build-pages\\\"\" \"live-server ./build\""
+  },
+  "keywords": [
+    "Static",
+    "Starter",
+    "Kit"
+  ],
+  "author": "Batiar Afas Rahmamulia",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "fs-extra": "^7.0.1",
+    "live-server": "^1.2.1",
+    "markdown-it": "^8.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
